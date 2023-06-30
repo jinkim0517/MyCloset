@@ -1,9 +1,11 @@
 $themeColor: #5c81d1;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 .app {
   display: flex;
   justify-content: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "QUicksand";
+
   .container {
     width: 1024px;
 
@@ -20,17 +22,22 @@ $themeColor: #5c81d1;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: $themeColor;
+        border-bottom: #333 solid 2px;
         .logo {
+          display: flex;
+          align-items: center;
+
+          h3 {
+            font-size: 15px;
+          }
           img {
-            width: 120px;
+            width: 100px;
             margin-left: 80px;
           }
         }
         .links {
           display: flex;
           align-items: center;
-          margin-right: 80px;
           gap: 25px;
 
           h6 {
@@ -43,21 +50,14 @@ $themeColor: #5c81d1;
             margin: 0;
           }
 
-          .add {
-            background-color: white;
+          .link {
             width: 100px;
             height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             font-weight: 300;
-            border: 1px solid white;
 
             &:hover {
               color: rgb(61, 136, 255);
               background-color: rgba(255, 255, 255, 0.846);
-              border: 1px solid $themeColor;
             }
           }
         }
@@ -261,85 +261,51 @@ $themeColor: #5c81d1;
     //WRITE
 
     .add {
-      margin-top: 20px;
-      display: flex;
-      gap: 20px;
+      // max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      
+      h2 {
+        font-size: 40px;
+        color: $themeColor;
+        margin-bottom: 30px;
+      }
 
       .content {
-        flex: 5;
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 80px;
 
-        input {
-          padding: 10px;
-          border: 1px solid lightgray;
-        }
-
-        .editorContainer {
-          height: 300px;
-          overflow: scroll;
-          border: 1px solid lightgray;
-
-          .editor {
-            height: 100%;
-            border: none;
+        .inputs {
+          display: block;
+          label {
+            text-align: left;
+            display: block;
           }
+
+
+          input, textarea, select {
+            width: 100%;
+            padding: 6px 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+            display: block;
+          }
+
         }
       }
 
-      .menu {
-        flex: 2;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        .item {
-          border: 1px solid lightgray;
-          padding: 10px;
-          flex:1;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          font-size: 12px;
-          color: #555;
-
-          h1{
-            font-size: 20px;
-          }
-
-          .file{
-            text-decoration: underline;
-            cursor: pointer;
-          }
-
-          .buttons{
-            display: flex;
-            justify-content: space-between;
-
-            :first-child{
-              cursor: pointer;
-              color: teal;
-              background-color: white;
-              border: 1px solid teal;
-              padding: 3px 5px;
-            }
-            :last-child{
-              cursor: pointer;
-              color: white;
-              background-color: teal;
-              border: 1px solid teal;
-              padding: 3px 5px;
-            }
-          }
-
-          .cat{
-            display: flex;
-            align-items: center;
-            gap: 2px;
-            color: teal;
-          }
-        }
+      button {
+        background: $themeColor;
+        color: #fff;
+        font-size: 20px;
+        border: 0;
+        padding: 15px;
+        margin-top: 20px;
+        border-radius: 8px;
+        cursor: pointer;
       }
     }
   }
