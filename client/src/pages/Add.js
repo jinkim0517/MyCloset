@@ -7,15 +7,14 @@ const Add = () => {
   const [desc, setDesc] = useState("")
   const [type, setType] = useState("")
   const [img, setImg] = useState(null)
-  const wears = 0
 
   const [thumbnail, setThumbnail] = useState()
 
   const upload = async () => {
     try {
       const formData = new FormData();
-      formData.append("img", img);
-      const res = await axios.post("/upload", formData);
+      formData.append("file", img);
+      const res = await axios.post("http://localhost:8800/upload", formData);
       return res.data;
     } catch (err) {
       console.log(err);
@@ -28,9 +27,9 @@ const Add = () => {
 
     try {
       await axios.post("http://localhost:8800/clothes", {
-            name,
-            desc,
-            type,
+            name: name,
+            desc: desc,
+            type: type,
             img: img ? imgUrl : "",
             wears: 0
           });
@@ -39,27 +38,26 @@ const Add = () => {
     }
   }
 
-
   return (
     <div className="add">
       <h2>Add an item</h2>
       <div className='content'>
         <div className='inputs'>
           <form>
-            <label>Clothing Name:</label>
+            <label>Clothing Name: *</label>
             <input 
               type="text" 
               required 
               name='name'
               onChange={(e) => setName(e.target.value)}
             />
-            <label>Clothing Description:</label>
+            <label>Clothing Description: *</label>
             <textarea
               required
               name='desc'
               onChange={(e) => setDesc(e.target.value)}
             ></textarea>
-            <label>Category:</label>
+            <label>Category: *</label>
             <select
               name='type'
               onChange={(e) => setType(e.target.value)}
@@ -76,14 +74,14 @@ const Add = () => {
               required 
               name='img'
               onChange={(e) => {
-                setImg(e.target.files[0]) // not working for some reason
+                setImg(e.target.files[0])
                 setThumbnail(URL.createObjectURL(e.target.files[0]))
               }}
 
             />
           </form>
         </div>
-        <img src={thumbnail} alt='Upload an image' />
+        <img className="thumbnail" src={thumbnail} alt='Upload an image' />
       </div>
       <button onClick={handleClick}>Add to Closet</button>
     </div>
