@@ -4,10 +4,8 @@ import {
   Route,
   Outlet,
 } from "react-router-dom";
-import Clothes from "./pages/Clothes";
-import Add from "./pages/Add";
+import Write from "./pages/Write";
 import Home from "./pages/Home";
-import Single from "./pages/Single";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sets from "./pages/Sets";
@@ -33,8 +31,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/add",
-        element: <Add />,
+        path: "/write",
+        element: <Write />,
       },
       {
         path: "/sets",

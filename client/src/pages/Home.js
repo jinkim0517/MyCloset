@@ -1,10 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import axios from 'axios'
+import Edit from "../img/edit.png";
+import Delete from "../img/delete.png";
+
 
 const Home = () => {
     const [clothes, setClothes] = useState([])
+
+    const [type, setType] = useState('-----')
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchAllClothes = async () => {
@@ -16,7 +23,7 @@ const Home = () => {
             }
         }
         fetchAllClothes()
-    }, [])
+    }, [type])
 
     var empty = true
     if (clothes.length > 0) {
@@ -31,7 +38,6 @@ const Home = () => {
           console.log(err);
         }
     };
-    
 
     return (
         <div className='home'>
@@ -48,18 +54,12 @@ const Home = () => {
                         <div className='content'>
                             <h1>{clothing.name}</h1>
                             <p>{clothing.desc}</p>
-                            <div className='wears'>
-                                <button onClick={() => {clothing.wears = clothing.wears - 1}}>
-                                    -
-                                </button>
-                                <h5>Total Wears: {clothing.wears}</h5>
-                                <button onClick={() => {clothing.wears = clothing.wears + 1}}>
-                                    +
-                                </button>
+                            <div className='buttons'>
+                                <Link to={'/write'} state={clothing}>
+                                    <img className='action' src={Edit} alt="" />
+                                </Link>
+                                <img onClick={() => {handleDelete(clothing.id)}} className='action' src={Delete} alt=""/>
                             </div>
-                            <button className='delete' onClick={() => {handleDelete(clothing.id)}}>
-                                Remove Item
-                            </button>
                         </div>
                     </div>
                 )))

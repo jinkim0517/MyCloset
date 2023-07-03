@@ -19,7 +19,7 @@ const Navbar = () => {
             <Link className="link" to="/sets">
                 <h6>Sets</h6>
             </Link>
-            <Link className="link" to="/add">
+            <Link className="link" to="/write">
                 <h6>Add</h6>
             </Link>
         </div>
