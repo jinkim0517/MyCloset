@@ -52,6 +52,7 @@ const Write = () => {
             img: img ? imgUrl : "",
             wears: 0
           });
+          navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -84,12 +85,12 @@ const Write = () => {
               value={type}
               onChange={(e) => setType(e.target.value)}
             >
-              <option value={null}>----</option>
+              <option value={""}>----</option>
               <option value="TOP">Top</option>
               <option value="BOTTOM">Bottom</option>
               <option value="OUTERWEAR">Outerwear</option>
-              <option value="Footwear">Footwear</option>
-              <option value="Accessory">Accessory</option>
+              <option value="FOOTWEAR">Footwear</option>
+              <option value="ACCESSORY">Accessory</option>
             </select>
             <input 
               type="file" 
