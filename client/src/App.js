@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sets from "./pages/Sets";
+import AddSet from "./pages/AddSet";
 import "./style.scss"
 
 const Layout = () => {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
       {
         path: "/sets",
         element: <Sets />,
+      },
+      {
+        path: "/addSet",
+        element: <AddSet />
       }
     ],
   }

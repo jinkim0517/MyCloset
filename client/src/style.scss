@@ -231,5 +231,75 @@ $themeColor: #5c81d1;
         max-width: 300px;
       }
     }
+
+    // SETS
+    .sets {
+      display: block;
+      .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+          font-size: 48px;
+        }
+
+        .addButton {
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+          padding: 0px 40px;
+          margin: 30px;
+          text-decoration: none;
+          font-weight: bold;
+          border: 2px $themeColor solid;
+          border-radius: 15px;
+          color: black;
+          background-color: #bbcef9;
+
+          &:hover {
+            background-color: #e2e9f9;
+          }
+        }
+
+      }
+
+      .set {
+        text-align: center;
+        align-items: center;
+        margin-top: 30px;
+
+        .header {
+          justify-content: center;
+          align-items: center;
+          h1 {
+            background-color: $themeColor;
+            font-size: 36px;
+            margin: 0px;
+            padding: 10px;
+          }
+        }
+
+        .singleDisplay{
+          display: grid;
+          grid-template-rows: repeat(3, auto);
+          grid-template-columns: repeat(2, auto);
+          gap: 10px;
+          border: 2px solid $themeColor;
+          padding: 15px;
+
+          img {
+            width: 200px;
+          }
+  
+          .segment {
+            display: flex;
+            width: 500px;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+        }
+      }
+    }
   }
 }

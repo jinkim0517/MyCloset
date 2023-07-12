@@ -68,8 +68,8 @@ const Home = () => {
                         <option value="/?cat=TOP">Top</option>
                         <option value="/?cat=BOTTOM">Bottom</option>
                         <option value="/?cat=Outerwear">Outerwear</option>
-                        <option value="/?cat=Footwear">Footwear</option>
-                        <option value="/?cat=Accessory">Accessory</option>
+                        <option value="/?cat=FOOTWEAR">Footwear</option>
+                        <option value="/?cat=ACCESSORY">Accessory</option>
                         </select>
                     </div>
                 </div>

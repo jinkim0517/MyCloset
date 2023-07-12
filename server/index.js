@@ -1,7 +1,8 @@
 import express from "express"
 import cors from "cors"
 import multer from "multer";
-import router from "./router.js";
+import clothesRouter from "./routers/clothes.js";
+import setRouter from "./routers/sets.js";
 
 const app = express()
 app.use(express.json())
@@ -23,7 +24,8 @@ app.post("/upload", upload.single('file'), function (req, res) {
     res.status(200).json(file.filename);
 });
 
-app.use("/clothes", router);
+app.use("/clothes", clothesRouter);
+app.use("/sets", setRouter);
 
 app.listen(8800, () => {
     console.log("Connected to the backend!");
