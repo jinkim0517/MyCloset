@@ -3,7 +3,6 @@ import {
     getSets,
     addSet,
     deleteSet,
-    updateSet,
     getSet
 } from "../controllers/sets.js"
 
@@ -13,6 +12,5 @@ setsRouter.get("/", getSets);
 setsRouter.get("/:id", getSet);
 setsRouter.post("/", addSet);
 setsRouter.delete("/:id", deleteSet);
-setsRouter.put("/:id", updateSet);
 
 export default setsRouter;

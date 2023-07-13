@@ -5,6 +5,7 @@ import axios from "axios";
 
 const Write = () => {
   const state = useLocation().state;  
+  const navigate = useNavigate();
 
   const [name, setName] = useState(state?.name || "");
   const [desc, setDesc] = useState(state?.desc || "");
@@ -14,7 +15,6 @@ const Write = () => {
 
   const [thumbnail, setThumbnail] = useState(img ? img : null);
 
-  const navigate = useNavigate();
 
   const [uploaded, setUploaded] = useState(false);
 
@@ -36,7 +36,6 @@ const Write = () => {
       imgUrl = await upload();
     }
     try {
-      console.log(imgUrl)
       state
         ? await axios.put(`http://localhost:8800/clothes/${state.id}`, {
             name: name,

@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Edit from "../img/edit.png";
 import Delete from "../img/delete.png";
 
-const Set = ({set}) => {
+const Set = ({ set }) => {
     const [top, setTop] = useState();
     const [outerwear, setOuterwear] = useState();
     const [bottom, setBottom] = useState();
@@ -39,7 +39,7 @@ const Set = ({set}) => {
         return (
             <div className='segment'>
                     <h3>{clothing.name}</h3>
-                <img src={`../upload/${clothing.img}`} />
+                <img src={`../upload/${clothing.img}`} alt="No Image" />
             </div>
         )
     }

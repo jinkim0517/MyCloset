@@ -24,7 +24,7 @@ export const getSet = (req, res) => {
 };
 
 export const addSet = (req, res) => {
-    const q = "INSERT INTO sets(`name`, `top`, `outerwear`, `bottom`, `footwear`, 'accessory') VALUES (?)";
+    const q = "INSERT INTO sets(`name`, `top`, `outerwear`, `bottom`, `footwear`, `accessory`) VALUES (?)";
     
     const values = [
         req.body.name,
@@ -48,18 +48,5 @@ export const deleteSet = (req, res) => {
     db.query(q, [setId], (err, data) => {
         if (err) return res.send(err)
         return res.json(data)
-    });
-}
-
-export const updateSet = (req, res) => {
-    const setId = req.params.id;
-    const q =
-    "UPDATE sets SET `name`=?,`top`=?,`outerwear`=?,`bottom`=?, `footwear`=?, `accessory`=? WHERE `id`=?";
-
-    const values = [req.body.name, req.body.top, req.body.outerwear, req.body.bottom, req.body.footwear, req.body.accessory];
-
-    db.query(q, [...values, setId], (err, data) => {
-        if (err) return res.status(500).json(err)
-        return res.json(data);
     });
 }
