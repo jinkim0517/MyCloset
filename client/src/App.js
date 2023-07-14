@@ -10,6 +10,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sets from "./pages/Sets";
 import AddSet from "./pages/AddSet";
+import Register from "./pages/Register";
+import Login from "./pages/Login";
+
 import "./style.scss"
 
 const Layout = () => {
@@ -44,6 +47,14 @@ const router = createBrowserRouter([
         element: <AddSet />
       }
     ],
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
   }
 ]);
 
