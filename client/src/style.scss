@@ -184,8 +184,7 @@ $themeColor: #5c81d1;
       text-align: center;
       
       h2 {
-        font-size: 40px;
-        color: $themeColor;
+        font-size: 48px;
         margin-bottom: 30px;
       }
 
@@ -306,6 +305,9 @@ $themeColor: #5c81d1;
     .addSet {
       margin: 0px;
       text-align: center;
+      h1 {
+        font-size: 48px;
+      }
 
       .segment {
         display: flex;
