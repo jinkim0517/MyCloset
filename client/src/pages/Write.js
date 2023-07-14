@@ -84,7 +84,7 @@ const Write = () => {
               value={type}
               onChange={(e) => setType(e.target.value)}
             >
-              <option value={""}>----</option>
+              <option value={""}>-----</option>
               <option value="TOP">Top</option>
               <option value="BOTTOM">Bottom</option>
               <option value="OUTERWEAR">Outerwear</option>

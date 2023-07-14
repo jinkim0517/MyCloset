@@ -45,7 +45,7 @@ const Sets = () => {
       <div className='head'>
         <h1>Your Sets</h1>
         <Link to={'/addSet'} className='addButton'>
-          <h3>Make Set</h3>
+          <h3>Create a Set</h3>
         </Link>
       </div>
 

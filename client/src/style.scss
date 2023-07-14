@@ -179,7 +179,6 @@ $themeColor: #5c81d1;
       }
 
     //ADD
-
     .add {
       margin: 0 auto;
       text-align: center;
@@ -268,12 +267,15 @@ $themeColor: #5c81d1;
         text-align: center;
         align-items: center;
         margin-top: 30px;
+        border: 2px solid $themeColor;
 
         .header {
-          justify-content: center;
+          display: flex;
+          justify-content: space-between;
           align-items: center;
+          background-color: #bbcef9;
+          padding: 5px  20px;
           h1 {
-            background-color: $themeColor;
             font-size: 36px;
             margin: 0px;
             padding: 10px;
@@ -285,12 +287,10 @@ $themeColor: #5c81d1;
           grid-template-rows: repeat(3, auto);
           grid-template-columns: repeat(2, auto);
           gap: 10px;
-          border: 2px solid $themeColor;
           padding: 15px;
 
           img {
             width: 200px;
-            border: 2px solid $themeColor;
           }
   
           .segment {
@@ -300,6 +300,58 @@ $themeColor: #5c81d1;
             align-items: center;
           }
         }
+      }
+    }
+
+    .addSet {
+      margin: 0px;
+      text-align: center;
+
+      .segment {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .input {
+          display: flex;
+          margin: 20px;
+          font-size: 30px;
+
+          input {
+            width: 200px;
+          }
+
+          * {
+            margin: 15px;
+          }
+          
+          select {
+            width: 200px;
+            height: 40px;
+          }
+        }
+
+        img {
+          margin: 10px;
+          padding: 0px;
+          max-width: 200px;
+        }
+      }
+
+      button {
+        width: 150px;
+        background: $themeColor;
+        color: #fff;
+        font-size: 20px;
+        border: 0;
+        padding: 15px;
+        margin-top: 40px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .notReady {
+        background-color: rgb(242, 144, 134);
       }
     }
   }

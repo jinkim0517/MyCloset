@@ -2,7 +2,6 @@ import axios from 'axios'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Edit from "../img/edit.png";
 import Delete from "../img/delete.png";
 
 const Set = ({ set }) => {
@@ -44,11 +43,21 @@ const Set = ({ set }) => {
         )
     }
 
+    const handleDelete = async (id) => {
+        try {
+          await axios.delete(`http://localhost:8800/sets/${id}`);
+          window.location.reload();
+        } catch (err) {
+          console.log(err);
+        }
+    };
+
 
     return (
         <>
             <div className='header'>
                 <h1>{set.name}</h1>
+                <img onClick={() => {handleDelete(set.id)}} className='action' src={Delete} alt=""/>
             </div>
             <div className='singleDisplay'>
                 {top ? segment(top) : null}
