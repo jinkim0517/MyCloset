@@ -2,11 +2,9 @@ import { db } from "../db.js"
 
 
 export const getSets = (req, res) => {
-    const q = req.query.cat
-      ? "SELECT * FROM sets WHERE name=?"
-      : "SELECT * FROM sets";
+    const q = "SELECT * FROM sets WHERE uid=?";
   
-    db.query(q, [req.query.cat], (err, data) => {
+    db.query(q, [req.query.uid], (err, data) => {
       if (err) return res.status(500).send(err);
   
       return res.status(200).json(data);
@@ -24,7 +22,7 @@ export const getSet = (req, res) => {
 };
 
 export const addSet = (req, res) => {
-    const q = "INSERT INTO sets(`name`, `top`, `outerwear`, `bottom`, `footwear`, `accessory`) VALUES (?)";
+    const q = "INSERT INTO sets(`name`, `top`, `outerwear`, `bottom`, `footwear`, `accessory`, `uid`) VALUES (?)";
     
     const values = [
         req.body.name,
@@ -32,7 +30,8 @@ export const addSet = (req, res) => {
         req.body.outerwear,
         req.body.bottom,
         req.body.footwear,
-        req.body.accessory
+        req.body.accessory,
+        req.body.uid
     ];
     
     db.query(q, [values], (err, data) => {

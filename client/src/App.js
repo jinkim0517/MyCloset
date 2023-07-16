@@ -27,11 +27,19 @@ const Layout = () => {
 
 const router = createBrowserRouter([
   {
+    path: "/register",
+    element: <Register />,
+  },
+  {
+    path: "/",
+    element: <Login />,
+  },
+  {
     path: "/",
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: "/home",
         element: <Home />,
       },
       {
@@ -47,14 +55,6 @@ const router = createBrowserRouter([
         element: <AddSet />
       }
     ],
-  },
-  {
-    path: "/register",
-    element: <Register />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
   }
 ]);
 

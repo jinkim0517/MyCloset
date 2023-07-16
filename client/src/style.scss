@@ -14,13 +14,73 @@ $themeColor: #5c81d1;
       color: inherit;
     }
 
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+
+      .header {
+        font-size: 50px;
+      }
+
+
+      h1 {
+        font-size: 20px;
+        color: $themeColor;
+        margin-bottom: 20px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        background-color: white;
+        width: 200px;
+        gap: 20px;
+
+        input {
+          padding: 10px;
+          border: none;
+          border-bottom: 1px solid gray;
+        }
+
+        button {
+          padding: 10px;
+          border: none;
+          background-color: $themeColor;
+          cursor: pointer;
+          color: white;
+        }
+
+        p {
+          font-size: 12px;
+          color: red;
+          text-align: center;
+        }
+
+        span {
+          font-size: 12px;
+          text-align: center;
+
+          .direct {
+            text-decoration: none;
+            color: $themeColor;
+            font-weight: bold;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
     //NAVBAR
 
     .navbar {
       .container {
         padding: 10px 0px;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         justify-content: space-between;
         border-bottom: #333 solid 2px;
         .logo {
@@ -37,22 +97,31 @@ $themeColor: #5c81d1;
         }
         .links {
           display: flex;
-          align-items: center;
           text-align: center;
           gap: 25px;
 
-          h6 {
+          h6, span {
             font-size: 22px;
             font-weight: 300;
+            width: 100px;
+            margin: 0px;
+            padding: 0px;
           }
 
           span {
-            cursor: pointer;
             margin: 0;
           }
 
+          .logout {
+            cursor: pointer;
+            color: rgb(242, 144, 134);
+          }
+
+          .username {
+            color: $themeColor;
+          }
+
           .link {
-            width: 100px;
             height: 50px;
             font-weight: 300;
 
@@ -60,6 +129,8 @@ $themeColor: #5c81d1;
               color: rgb(61, 136, 255);
               background-color: rgba(255, 255, 255, 0.846);
             }
+
+
           }
         }
       }

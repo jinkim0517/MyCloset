@@ -1,22 +1,23 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import axios from 'axios'
+import axios from 'axios';
 import Edit from "../img/edit.png";
 import Delete from "../img/delete.png";
 import Set from '../components/Set';
+import { AuthContext } from '../context/authContext';
 
 const Sets = () => {
   const [sets, setSets] = useState([])
 
   const [search, setSearch] = useState("");
-
+  const { currentUser, logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
   useEffect(() => {
       const fetchSets = async () => {
           try {
-              const resp = await axios.get(`http://localhost:8800/sets`);
+              const resp = await axios.get(`http://localhost:8800/sets/?uid=${currentUser.id}`);
               setSets(resp.data);
           } catch(err){
               console.log(err);

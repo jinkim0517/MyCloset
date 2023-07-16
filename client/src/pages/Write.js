@@ -1,11 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from '../context/authContext';
 import axios from "axios";
 
 const Write = () => {
   const state = useLocation().state;  
   const navigate = useNavigate();
+  const { currentUser, logout } = useContext(AuthContext);
 
   const [name, setName] = useState(state?.name || "");
   const [desc, setDesc] = useState(state?.desc || "");
@@ -43,15 +45,17 @@ const Write = () => {
             type: type,
             img: uploaded ? imgUrl : img,
             wears: wears,
+            uid: currentUser.id
           })
         : await axios.post("http://localhost:8800/clothes/", {
             name: name,
             desc: desc,
             type: type,
             img: img ? imgUrl : "",
-            wears: 0
+            wears: 0,
+            uid: currentUser.id
           });
-          navigate("/");
+          navigate("/home");
     } catch (err) {
       console.log(err);
     }

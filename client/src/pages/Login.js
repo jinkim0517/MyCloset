@@ -13,7 +13,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  const login = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
 
 
   const handleChange = (e) => {
@@ -24,7 +24,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await login(inputs);
-      navigate("/");
+      navigate("/home");
     } catch (err) {
       setError(err.response.data);
     }
@@ -32,7 +32,7 @@ const Login = () => {
 
   return (
     <div className="auth">
-      <h1>Login</h1>
+      <h1 className="header">Welcome, please login</h1>
       <form>
         <input
           required
@@ -51,7 +51,7 @@ const Login = () => {
         <button onClick={handleSubmit}>Login</button>
         {err && <p>{err}</p>}
         <span>
-          Don't you have an account? <Link to="/register">Register</Link>
+          Don't have an account? <Link className="direct" to="/register">Register</Link>
         </span>
       </form>
     </div>

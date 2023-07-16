@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react';
+import { AuthContext } from '../context/authContext';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
 
 const AddSet = () => {
     const navigate = useNavigate();
+    const { currentUser, logout } = useContext(AuthContext);
 
     const [tops, setTops] = useState([]);
     const [outerwears, setOuterwears] = useState([]);
@@ -22,13 +24,14 @@ const AddSet = () => {
 
     useEffect(() => {
         const fetchClothes = async () => {
+            const currentUserId = currentUser.id;
             try {
                 const [respTops, respOuterwears, respBottoms, respFootwear, respAccessories] = await axios.all([
-                    axios.get(`http://localhost:8800/clothes/?cat=TOP`),
-                    axios.get(`http://localhost:8800/clothes/?cat=OUTERWEAR`),
-                    axios.get(`http://localhost:8800/clothes/?cat=BOTTOM`),
-                    axios.get(`http://localhost:8800/clothes/?cat=FOOTWEAR`),
-                    axios.get(`http://localhost:8800/clothes/?cat=ACCESSORY`)
+                    axios.get(`http://localhost:8800/clothes/?uid=${currentUserId}&type=TOP`),
+                    axios.get(`http://localhost:8800/clothes/?uid=${currentUserId}&type=OUTERWEAR`),
+                    axios.get(`http://localhost:8800/clothes/?uid=${currentUserId}&type=BOTTOM`),
+                    axios.get(`http://localhost:8800/clothes/?uid=${currentUserId}&type=FOOTWEAR`),
+                    axios.get(`http://localhost:8800/clothes/?uid=${currentUserId}&type=ACCESSORY`)
                 ]);
                 setTops(respTops.data);
                 setOuterwears(respOuterwears.data);
@@ -53,6 +56,7 @@ const AddSet = () => {
                     bottom: bottomInput ? parseInt(bottomInput.split(" ")[0]) : null,
                     footwear: footwearInput ? parseInt(footwearInput.split(" ")[0]) : null,
                     accessory: accessoryInput ? parseInt(accessoryInput.split(" ")[0]) : null,
+                    uid: currentUser.id
                   });
                   navigate("/sets");
             } catch (err) {

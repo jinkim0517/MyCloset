@@ -20,7 +20,7 @@ const Register = () => {
     e.preventDefault();
     try {
       await axios.post("http://localhost:8800/auth/register", inputs);
-      navigate("/login");
+      navigate("/");
     } catch (err) {
       setError(err.response.data);
     }
@@ -28,7 +28,7 @@ const Register = () => {
 
   return (
     <div className="auth">
-      <h1>Register</h1>
+      <h1 className="header">Register an Account</h1>
       <form>
         <input
           required
@@ -47,7 +47,7 @@ const Register = () => {
         <button onClick={handleSubmit}>Register</button>
         {err && <p>Error, please try again.</p>}
         <span>
-          Do you have an account? <Link to="/login">Login</Link>
+          Do you have an account? <Link className="direct" to="/">Login</Link>
         </span>
       </form>
     </div>

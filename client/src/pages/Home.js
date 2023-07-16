@@ -1,12 +1,14 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AuthContext } from '../context/authContext';
 import axios from 'axios'
 import Edit from "../img/edit.png";
 import Delete from "../img/delete.png";
 
 
 const Home = () => {
+    const { currentUser, logout } = useContext(AuthContext);
     const [clothes, setClothes] = useState([])
 
     const [search, setSearch] = useState("");
@@ -17,7 +19,8 @@ const Home = () => {
     useEffect(() => {
         const fetchClothes = async () => {
             try {
-                const resp = await axios.get(`http://localhost:8800/clothes${type}`);
+                const resp = await axios.get(`http://localhost:8800/clothes/?uid=${currentUser.id}${type}`);
+                console.log(`http://localhost:8800/clothes/?uid=${currentUser.id}${type}`)
                 setClothes(resp.data);
             } catch(err){
                 console.log(err);
@@ -65,11 +68,11 @@ const Home = () => {
                         onChange={(e) => setType(e.target.value)}
                         >
                         <option value={""}>----</option>
-                        <option value="/?cat=TOP">Top</option>
-                        <option value="/?cat=BOTTOM">Bottom</option>
-                        <option value="/?cat=Outerwear">Outerwear</option>
-                        <option value="/?cat=FOOTWEAR">Footwear</option>
-                        <option value="/?cat=ACCESSORY">Accessory</option>
+                        <option value="&type=TOP">Top</option>
+                        <option value="&type=BOTTOM">Bottom</option>
+                        <option value="&type=Outerwear">Outerwear</option>
+                        <option value="&type=FOOTWEAR">Footwear</option>
+                        <option value="&type=ACCESSORY">Accessory</option>
                         </select>
                     </div>
                 </div>
