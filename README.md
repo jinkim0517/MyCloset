@@ -18,13 +18,20 @@ A closet application that can help virtually store and organize your clothes. Bu
   - Sets are displayed by displaying the image of each individual clothing from TOP -> OUTERWEAR -> BOTTOM -> FOOTWEAR -> ACCESSORY
   - Not all types of clothing are required
   - Save each set to a new MySQL table
- 
-## UPCOMING
-- Account System
+- ACCOUNT SYSTEM
   - Sign in with a username and password to access your closet
-- Webhost implementation
-  - Check your closet from anywhere at any time!
+    - Each user has their own individual data
+    - Cannot access data from other accounts
+  - Bcrypt powered password encryption
+  - Cookie parsing for ease-of-use
  
+
+## Demos
+- Login: https://drive.google.com/file/d/1gZSV4XrzPF1r6ZjHVMsNwyjrlN8FQHv1/view?usp=share_link
+- Add: https://drive.google.com/file/d/1CJwBPaHrQmrSOYoIjjYW2hrshZWmVTxG/view?usp=share_link
+- Sets: https://drive.google.com/file/d/1hesk267QPrCes6pLNsU7w98a8Y_CZ-xY/view?usp=share_link
+- Persistence: https://drive.google.com/file/d/1twzrBgEHesuPTewhBWYOSjuDeGAofUtE/view?usp=share_link
+
 ## Available Scripts
 
 In the project directory, you can run:
