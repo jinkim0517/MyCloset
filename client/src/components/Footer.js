@@ -6,7 +6,7 @@ const Footer = () => {
     <footer>
       <img src={Logo} alt="" />
       <span>
-        Made by Jin Kim with <b>React.js</b>.
+        Made by Jin Kim with <b>React.js</b> and <b>Node.js</b>.
       </span>
     </footer>
   );
