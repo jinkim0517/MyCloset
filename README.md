@@ -1,7 +1,7 @@
 # MyCloset
 
 ## About
-A closet application that can help virtually store and organize your clothes. Built with React and Node JS connected to a local MySQL server (see `client` and `server` files).
+A closet application that can help virtually store and organize your clothes. Built with React frontend and Node JS backend connected to a local MySQL server (see `client` and `server` files).
 
 
 ## Features
