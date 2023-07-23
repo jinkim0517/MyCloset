@@ -16,24 +16,24 @@
 <img src="./img/frontEnd.png" alt="Frontend Image"/>
 
 ### CLOSET
-  - Upload images of your clothes
-  - Label your clothes with custom names
-  - Describe your clothes or write down special notes
-  - Categorize the clothing
-  - Filter and search through your closet with a filter selector
-  - Save your closet automatically to a local database
+  - Upload images of your clothes.
+  - Label your clothes with custom names.
+  - Describe your clothes or write down special notes.
+  - Categorize the clothing.
+  - Filter and search through your closet with a filter selector.
+  - Save your closet automatically to a local database.
 ### SETS/OUTFITS
-  - Create sets of clothes
-  - One of each clothing type can be added to a set
-  - Sets are displayed by displaying the image of each individual clothing from TOP -> OUTERWEAR -> BOTTOM -> FOOTWEAR -> ACCESSORY
-  - Not all types of clothing are required
-  - Save each set to a new MySQL table
+  - Create sets of clothes.
+  - One of each clothing type can be added to a set.
+  - Sets are displayed by displaying the image of each individual clothing from TOP -> OUTERWEAR -> BOTTOM -> FOOTWEAR -> ACCESSORY.
+  - Not all types of clothing are required.
+  - Save each set to a new MySQL table.
 ### ACCOUNT SYSTEM
-  - Sign in with a username and password to access your closet
-    - Each user has their own individual data
-    - Cannot access data from other accounts
-  - Bcrypt powered password encryption
-  - Cookie parsing for ease-of-use
+  - Sign in with a username and password to access your closet.
+    - Each user has their own individual data.
+    - Cannot access data from other accounts.
+  - Bcrypt powered password encryption.
+  - Cookie parsing for ease-of-use.
 
  
 
@@ -44,7 +44,7 @@
 - Persistence: https://drive.google.com/file/d/1twzrBgEHesuPTewhBWYOSjuDeGAofUtE/view?usp=share_link
 
 ## How to use
-1. Clone this repository: https://github.com/jinkim0517/MyCloset.git
+1. Clone this repository: `https://github.com/jinkim0517/MyCloset.git`.
 2. Import the SQL schemas found in `SQLFiles` to your local database.
 3. Install node packages by running `npm install`.
 4. In both the `client` and `server` folders, run `npm start`.
