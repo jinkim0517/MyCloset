@@ -1,7 +1,7 @@
 # MyCloset <img src="./client/src/img/$wagGorilla.jpg" align="right" alt="Logo Image" width="200"/>
 
   <div width="50%">
-  A full stack closet application that can help virtually store and organize your clothes. Add, delete, update, save and group your clothes with this efficient and visual tool. Currently only available through a local database via SQL tables.
+  A full stack closet application that virtually stores and organizes your clothes. Add, delete, update, save and group your clothes with this efficient and visual tool. Currently only available through a local database via SQL tables.
   </div> 
 
 ## Built with
