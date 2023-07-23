@@ -1,12 +1,10 @@
-# MyCloset
+# MyCloset <img src="./client/src/img/$wagGorilla.jpg" align="right" alt="Logo Image" width="200"/>
 
-<div style="display: flex;">
-  <div>
+  <div width="400">
   A closet application that can help virtually store and organize your clothes. Add, delete, update, save and group your clothes with this efficient and visual tool.
   Built with React frontend and Node JS backend connected to a local MySQL server (see `client` and `server` files).
   </div> 
-  <div><img src="./client/src/img/$wagGorilla.jpg" alt="Logo Image" width="200"/> </div>
-</div>
+  <img src="./img/frontEnd.png" alt="Frontend Image"/>
 
 ## Built with
 * <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" width="100"/>
