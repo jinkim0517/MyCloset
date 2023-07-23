@@ -1,9 +1,19 @@
 # MyCloset
 
-## About
-A closet application that can help virtually store and organize your clothes. Built with React frontend and Node JS backend connected to a local MySQL server (see `client` and `server` files).
+<div style="display: flex;">
+  <div>
+  A closet application that can help virtually store and organize your clothes. Add, delete, update, save and group your clothes with this efficient and visual tool.
+  Built with React frontend and Node JS backend connected to a local MySQL server (see `client` and `server` files).
+  </div> 
+  <div><img src="./client/src/img/$wagGorilla.jpg" alt="Logo Image" width="200"/> </div>
+</div>
 
-
+## Built with
+* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" width="100"/>
+* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png" width="100"/>
+* <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" width="100"/>
+* <img src="http://nodejs.org/images/logos/nodejs-dark.png" width="100"/>
+* <img src="https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" width="100"/>
 ## Features
 - CLOSET
   - Upload images of your clothes
@@ -98,3 +108,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Node.js]: http://nodejs.org/images/logos/nodejs-dark.png
