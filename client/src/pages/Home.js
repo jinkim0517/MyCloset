@@ -20,7 +20,6 @@ const Home = () => {
         const fetchClothes = async () => {
             try {
                 const resp = await axios.get(`http://localhost:8800/clothes/?uid=${currentUser.id}${type}`);
-                console.log(`http://localhost:8800/clothes/?uid=${currentUser.id}${type}`)
                 setClothes(resp.data);
             } catch(err){
                 console.log(err);
