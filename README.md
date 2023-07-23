@@ -1,9 +1,19 @@
 # MyCloset
 
-## About
-A closet application that can help virtually store and organize your clothes. Built with React and Node JS connected to a local MySQL server (see `client` and `server` files).
+<div style="display: flex;">
+  <div>
+  A closet application that can help virtually store and organize your clothes. Add, delete, update, save and group your clothes with this efficient and visual tool.
+  Built with React frontend and Node JS backend connected to a local MySQL server (see `client` and `server` files).
+  </div> 
+  <div><img src="./client/src/img/$wagGorilla.jpg" alt="Logo Image" width="200"/> </div>
+</div>
 
-
+## Built with
+* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" width="100"/>
+* <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png" width="100"/>
+* <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" width="100"/>
+* <img src="http://nodejs.org/images/logos/nodejs-dark.png" width="100"/>
+* <img src="https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" width="100"/>
 ## Features
 - CLOSET
   - Upload images of your clothes
@@ -18,13 +28,20 @@ A closet application that can help virtually store and organize your clothes. Bu
   - Sets are displayed by displaying the image of each individual clothing from TOP -> OUTERWEAR -> BOTTOM -> FOOTWEAR -> ACCESSORY
   - Not all types of clothing are required
   - Save each set to a new MySQL table
- 
-## UPCOMING
-- Account System
+- ACCOUNT SYSTEM
   - Sign in with a username and password to access your closet
-- Webhost implementation
-  - Check your closet from anywhere at any time!
+    - Each user has their own individual data
+    - Cannot access data from other accounts
+  - Bcrypt powered password encryption
+  - Cookie parsing for ease-of-use
  
+
+## Demos
+- Login: https://drive.google.com/file/d/1gZSV4XrzPF1r6ZjHVMsNwyjrlN8FQHv1/view?usp=share_link
+- Add: https://drive.google.com/file/d/1CJwBPaHrQmrSOYoIjjYW2hrshZWmVTxG/view?usp=share_link
+- Sets: https://drive.google.com/file/d/1hesk267QPrCes6pLNsU7w98a8Y_CZ-xY/view?usp=share_link
+- Persistence: https://drive.google.com/file/d/1twzrBgEHesuPTewhBWYOSjuDeGAofUtE/view?usp=share_link
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -91,3 +108,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Node.js]: http://nodejs.org/images/logos/nodejs-dark.png
