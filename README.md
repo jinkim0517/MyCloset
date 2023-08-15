@@ -7,7 +7,7 @@ A full stack closet application that virtually stores and organizes your clothes
 * <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/640px-HTML5_logo_and_wordmark.svg.png" width="100"/>
 * <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/1280px-Sass_Logo_Color.svg.png" width="100"/>
 * <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" width="100"/>
-* <img src="http://nodejs.org/images/logos/nodejs-dark.png" width="100"/>
+* <img src="https://brandslogos.com/wp-content/uploads/images/large/nodejs-logo.png" width="100"/>
 * <img src="https://1000logos.net/wp-content/uploads/2020/08/MySQL-Logo.png" width="100"/>
 
 ## Features
