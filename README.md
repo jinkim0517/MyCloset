@@ -45,5 +45,6 @@ A full stack closet application that virtually stores and organizes your clothes
 ## How to use
 1. Clone this repository: `https://github.com/jinkim0517/MyCloset.git`.
 2. Import the SQL schemas found in `SQLFiles` to your local database.
-3. Install node packages by running `npm install`.
-4. In both the `client` and `server` folders, run `npm start`.
+3. Change the information in the `db.js` file to your own host.
+4. Install node packages by running `npm install`.
+5. In both the `client` and `server` folders, run `npm start`.
