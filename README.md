@@ -37,7 +37,12 @@ A full stack closet application that virtually stores and organizes your clothes
  
 
 ## Demos
-- Login: https://drive.google.com/file/d/1gZSV4XrzPF1r6ZjHVMsNwyjrlN8FQHv1/view?usp=share_link
+### Login:
+
+https://github.com/jinkim0517/MyCloset/assets/90814113/bebc7c95-e408-4d2c-adfa-fad16d0d6cf3
+
+### Add:
+
 - Add: https://drive.google.com/file/d/1CJwBPaHrQmrSOYoIjjYW2hrshZWmVTxG/view?usp=share_link
 - Sets: https://drive.google.com/file/d/1hesk267QPrCes6pLNsU7w98a8Y_CZ-xY/view?usp=share_link
 - Persistence: https://drive.google.com/file/d/1twzrBgEHesuPTewhBWYOSjuDeGAofUtE/view?usp=share_link
