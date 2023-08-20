@@ -43,9 +43,16 @@ https://github.com/jinkim0517/MyCloset/assets/90814113/bebc7c95-e408-4d2c-adfa-f
 
 ### Add:
 
-- Add: https://drive.google.com/file/d/1CJwBPaHrQmrSOYoIjjYW2hrshZWmVTxG/view?usp=share_link
-- Sets: https://drive.google.com/file/d/1hesk267QPrCes6pLNsU7w98a8Y_CZ-xY/view?usp=share_link
-- Persistence: https://drive.google.com/file/d/1twzrBgEHesuPTewhBWYOSjuDeGAofUtE/view?usp=share_link
+https://github.com/jinkim0517/MyCloset/assets/90814113/25e5ae86-4a59-4868-849e-86820f3d29c4
+
+### Sets/Outfits
+
+https://github.com/jinkim0517/MyCloset/assets/90814113/8201663b-09d7-4664-b561-dc5ea9203efa
+
+### Persistence
+
+https://github.com/jinkim0517/MyCloset/assets/90814113/76d2c762-59f5-4f3c-86e9-33339425762c
+
 
 ## How to use
 1. Clone this repository: `https://github.com/jinkim0517/MyCloset.git`.
